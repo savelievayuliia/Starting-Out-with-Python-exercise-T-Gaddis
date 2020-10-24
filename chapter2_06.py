@@ -1,0 +1,1 @@
+due = total - downpayment
