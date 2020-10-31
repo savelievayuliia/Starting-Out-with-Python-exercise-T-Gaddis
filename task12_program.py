@@ -1,5 +1,12 @@
-number = int(input("Print the number to calculate factorial for: "))
-factorial_start = 1
-for x in range(1, number + 1):
-    factorial_start *= x
-print("Factorial = ", factorial_start)
+RIGHT_ANSWER = 1
+
+
+def correct_answer():
+    choose_answer = int(input("Enter the answer: "))
+    if choose_answer == RIGHT_ANSWER:
+        print("Congrats! It is a correct answer. ")
+    else:
+        print("The right answer was ", RIGHT_ANSWER)
+
+
+correct_answer()
