@@ -1,0 +1,7 @@
+James	2.1	
+William	3.6	
+8.1	5.3	
+Nick	2.6	
+Leo	3.2	
+Hill	2.1	
+Polly	4.5	

@@ -1,14 +1,12 @@
-def createListNumbers():
-    list_numbers = []
-    for number in range(1,7):
-        list_item = int(input("Enter num "+str(number)+": "))
-        list_numbers.append(list_item)
-    return list_numbers
+file = open("numbers.txt", "r")
+q_numbers = 0
+summa = 0
 
-def function1(x, y):
-    for item in x:
-        if item > y:
-            print(item)
+for number in file:
+    value = int(number)
+    summa += value
+    q_numbers += 1
+file.close()
 
-number = int(input("Enter integer number to compare the list with: "))
-function1(createListNumbers(), number)
+average_numbers = summa / q_numbers
+print("Sum of numbers in file is ", average_numbers)
