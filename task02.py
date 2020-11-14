@@ -1,24 +1,14 @@
-myfile_name = str(input("Enter the name of a file"))
-file = open(myfile_name, "r")
+number1 = int(input("Enter integer number x "))
+number2 = int(input("Enter integer number y "))
+
+list_x = []
 
 
-def sum_lines():
-    sum_lines = 0
-    for lines in file:
-        sum_lines += 1
-    return sum_lines
+def function(x, y):
+    if y > 0:
+        list_x.append(x)
+        function(x,y-1)
+    summa_x = sum(list_x)
+    return list_x , summa_x
 
-
-if sum_lines() > 5:
-    for i in range(0, 5):
-        file = open(myfile_name, "r")
-        data = file.readlines()[i]
-        data = data.rstrip('\n')
-        print(data)
-        i += 1
-else:
-    file = open(myfile_name, "r")
-    for i in file:
-        print(i,end="")
-
-file.close()
+print(function(number1, number2))
